@@ -2,11 +2,11 @@ version: 1.0.{build}
 image: Visual Studio 2022
 
 environment:
-  nodejs_version: "14"
+  nodejs_version: "18"
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm install
+  - npm install --legacy-peer-deps
 
 test_script:
   - npm run lint
