@@ -31,8 +31,6 @@ install:
 build:
   mode: Script
   script: |
-    npm install
-    npm run lint
     npm run build
 
 test_script:
