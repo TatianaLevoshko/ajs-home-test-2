@@ -23,5 +23,4 @@ branches:
 cache: node_modules
 
 build_script:
-  - npm install
   - npm run build

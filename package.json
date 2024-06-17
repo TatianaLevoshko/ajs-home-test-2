@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "lint": "eslint .",
-    "coverage": "npm run test"
+    "coverage": "npm run test",
+    "build": "babel src --out-dir dist"
   },
   "type": "module",
   "dependencies": {},
