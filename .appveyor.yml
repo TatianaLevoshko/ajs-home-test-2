@@ -22,9 +22,9 @@ branches:
   only:
     - main
 
-cache: node_modules  
-  
+cache:
+  - node_modules
+
 build:
   script:
-    - npm install
     - npm run build
