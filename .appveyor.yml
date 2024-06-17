@@ -20,7 +20,7 @@ stack: node 12
 
 branches:
   only:
-    -main
+    - main
 
 cache: node_modules  
   
