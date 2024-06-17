@@ -9,18 +9,20 @@ install:
   - npm install
 
 test_script:
-  - npm run coverage
-  - npm run lint && npm test
+  - npm run lint
+  - npm test
 
 artifacts:
   - path: coverage
     name: code-coverage
 
-stack: node 12
-
 branches:
   only:
     - main
 
-cache:
-  - node_modules
+cache: node_modules
+
+# Переключение режима сборки на Script и указание команд сборки
+build_script:
+  - npm install
+  - npm run build

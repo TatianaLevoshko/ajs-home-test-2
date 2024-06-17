@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest --coverage",
     "lint": "eslint .",
-    "test": "jest --coverage"
+    "coverage": "npm run test"
   },
   "type": "module",
   "dependencies": {},
