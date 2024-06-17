@@ -25,7 +25,6 @@ branches:
 cache: node_modules  
   
 build:
-  mode: release
   script:
     - npm install
     - npm run build
