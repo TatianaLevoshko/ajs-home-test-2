@@ -1,10 +1,27 @@
 import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-
+import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
+import jestPlugin from "eslint-plugin-jest";
 
 export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+  {
+    ignores: ["coverage/**", "node_modules/**"],
+    files: ["**/*.js", "**/*.ts"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.jest
+      }
+    },
+    plugins: {
+      "@typescript-eslint": typescriptEslintPlugin,
+      jest: jestPlugin
+    },
+    rules: {
+      "no-unused-vars": "warn",
+      "no-undef": "error"
+    }
+  }
 ];
